@@ -32,3 +32,5 @@ A la hora de trabajar con ML las metodologías más comunes de trabajo son:
     - Despliegue: Implementar el modelo en producción.
     - Monitoreo y mantenimiento: Supervisar el rendimiento y actualizar el modelo cuando sea necesario.
 2. MLOps (Machine Learning Operations): Esta metodología se centra en la colaboración entre equipos de desarrollo, operaciones y científicos de datos para llevar modelos de ML a producción. Incluye etapas como experimentación, entrenamiento, validación, despliegue y monitoreo continuo.
+
+En definitiva la metodología de trabajo en ML implica comprender los datos, crear modelos, evaluar el rendimiento de los mismos y llevarlos a producción.
