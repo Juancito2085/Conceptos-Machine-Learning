@@ -34,3 +34,10 @@ A la hora de trabajar con ML las metodologías más comunes de trabajo son:
 2. MLOps (Machine Learning Operations): Esta metodología se centra en la colaboración entre equipos de desarrollo, operaciones y científicos de datos para llevar modelos de ML a producción. Incluye etapas como experimentación, entrenamiento, validación, despliegue y monitoreo continuo.
 
 En definitiva la metodología de trabajo en ML implica comprender los datos, crear modelos, evaluar el rendimiento de los mismos y llevarlos a producción.
+
+Debido a los modelos de ML son básicamente algoritmos deberíamos entender que es un algoritmo, entonces:
+
+Un algoritmo es una secuencia de pasos ordenada que son requeridos para una lograr una tarea en particular. Podríamos decir que en nuestro campo un algoritmo toma una entrada, realiza una serie de operaciones o un proceso y produce la salida deseada.
+Un ejemplo de esto sería tomar una lista de números enteros desordenados, ordenarlos y mostrar la lista ordenada.
+
+El paradigma del ML entonces sería aprender las instrucciones en base a ejemplos de entrada y salida, de alguna manera diría que el modelo se "entrena" con datos. Algo similar a lo que hace el cerebro humano.
