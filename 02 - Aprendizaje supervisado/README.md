@@ -26,7 +26,15 @@ $\beta_1$ es la pendiente de la recta (o dicho de manera más coloquial la pendi
 
 Estos dos coeficientes explicados anteriormente son los parámetros del modelo los cuales se calculan a partir del entrenamiento con los datos.
 
-El método más común de regresión simple es el método de mínimos cuadrados
+El método más común de regresión simple es el método de mínimos cuadrados.
+
+A continuación veremos una animación de como el modelo se va ajustando a los datos que tiene.
+
+![regresion_linea_animacion](/gif/ani_regresion_lineal.gif)
+
+Y finalmente una image con todos los datos sería.
+
+![regresion_lineal](/img/regresion_lineal.png "hola")
 
 #### Regresión Ridge
 
