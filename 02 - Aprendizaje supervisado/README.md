@@ -90,11 +90,63 @@ Donde $\beta_0,\beta_1, ... ,\beta_n$ son los coeficientes del modelo
 
 ### Algoritmos de clasificación
 
+Recordemos de manera muy rápida que los algoritmos de clasificación tiene como salida etiquetas o clases.
+A continuación vamos a ver los mas usados en python
+
 #### Regresión logística
 
-#### Máquinas de soporte vectorial(SVD)
+Es un modelo estadístico utilizado para predecir la probabilidad de que ocurra un evento binario (es decir, un evento con dos posibles resultados, como “sí” o “no”, “verdadero” o “falso”) en función de una o más variables independientes.
+
+La regresión logística estima la probabilidad de que ocurra un evento, con resultados que siempre están entre 0 y 1.
+
+Utiliza la función logística (o sigmoide) para transformar la salida de una combinación lineal de las variables independientes en una probabilidad.
+
+Aunque es un modelo lineal en los coeficientes, la transformación logística permite modelar relaciones no lineales entre las variables independientes y la probabilidad del evento.
+
+La fórmula básica de la regresión logística es:
+
+$logit(p)=\ln(\frac{p}{1-p})=\beta_0+\beta_1x_1+...+\beta_nx_n$
+
+Donde
+
+- $p$ es la probabilidad de que suceda el evento
+- $\beta_0$ es el intercepto
+- $\beta_1x_1+...\beta_nx_n$ son los coeficientes de las variables independientes.
+
+#### Máquinas de soporte vectorial(SVM)
+El objetivo principal de una SVM es encontrar el hiperplano que mejor separe las diferentes clases en el espacio de características. Este hiperplano es una línea (en 2D), un plano (en 3D) o un hiperplano (en dimensiones superiores).
+
+Las SVM buscan maximizar el margen, es decir, la distancia entre el hiperplano y los puntos de datos más cercanos de cada clase. Estos puntos cercanos se llaman vectores de soporte.
+
+Para problemas linealmente separables, las SVM encuentran un hiperplano lineal. Para problemas no linealmente separables, utilizan kernels para transformar los datos a un espacio de mayor dimensión donde un hiperplano lineal pueda separar las clases.
+
+La ecuación del hiperplano de una SVM es:
+
+$w.x+b=0$
+
+Donde:
+
+- $w$ es el vector de pesos
+
+- $x$ es el vector de características
+
+- $b$ es el sesgo
 
 #### K-vecinos más cercanos(KNN)
+
+Este algoritmo clasifica un punto de datos basado en la proximidad de sus vecinos más cercanos. La idea principal es que los puntos de datos similares estarán cerca unos de otros.
+
+Funciona de la siguiente manera:
+
+1.  Selección de K: Se elige un número ( K ) de vecinos más cercanos.
+
+2. Cálculo de Distancias: Se calcula la distancia entre el punto de datos a clasificar y todos los puntos en el conjunto de entrenamiento. La distancia euclidiana es la más comúnmente utilizada.
+
+3. Identificación de Vecinos: Se seleccionan los ( K ) puntos más cercanos.
+
+4. Clasificación: Para problemas de clasificación, se asigna la clase más común entre los ( K ) vecinos. Para problemas de regresión, se toma el promedio de los valores de los ( K ) vecinos.
+
+5. Aplicaciones: KNN se utiliza en diversas áreas como la detección de escritura manuscrita, reconocimiento de imágenes, y sistemas de recomendación, entre otros.
 
 #### Árboles de decisión
 
