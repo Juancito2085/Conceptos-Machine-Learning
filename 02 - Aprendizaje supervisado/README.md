@@ -149,12 +149,61 @@ Funciona de la siguiente manera:
 5. Aplicaciones: KNN se utiliza en diversas áreas como la detección de escritura manuscrita, reconocimiento de imágenes, y sistemas de recomendación, entre otros.
 
 #### Árboles de decisión
+Son utilizados tanto para tareas de clasificación como de regresión. 
 
-#### Bosques aleatorios
+Un árbol de decisión tiene una estructura jerárquica similar a un árbol, que consta de un nodo raíz, ramas, nodos internos y nodos hoja. El nodo raíz es el punto de partida y las ramas representan las decisiones o divisiones basadas en las características de los datos.
+
+- Nodo raíz: El punto de inicio del árbol.
+- Nodos internos: Representan decisiones basadas en una característica específica.
+- Nodos hoja: Representan los resultados finales o las clases en las que se clasifican los datos.
+
+El árbol de decisión divide los datos en subconjuntos más pequeños y homogéneos mediante decisiones basadas en las características de los datos. Este proceso se repite de manera recursiva hasta que se alcanza un nodo hoja.
+#### Random Forest
+Este método se basa en la creación de múltiples árboles de decisión y combina sus resultados para mejorar la precisión y evitar el sobreajuste.
+
+El funcionamiento se puede resumir de la siguiente manera:
+
+- Construcción de Árboles de Decisión: Se generan varios árboles de decisión a partir de diferentes subconjuntos de datos. Cada árbol se entrena de manera independiente.
+- Votación o Promedio: Para problemas de clasificación, cada árbol “vota” por una clase y la clase con más votos es la predicción final. Para problemas de regresión, se toma el promedio de las predicciones de todos los árboles.
+- Aleatoriedad: Se introduce aleatoriedad tanto en la selección de los datos como en la selección de las características (features) para cada árbol, lo que ayuda a crear árboles no correlacionados y mejora la robustez del modelo.
+
+Este método es muy popular debido a su capacidad para manejar grandes conjuntos de datos y su flexibilidad para trabajar con diferentes tipos de datos y problemas.
 
 #### Gradient Boosting
 
+Es un método combina múltiples árboles de decisión de manera independiente, el Gradient Boosting construye el modelo de manera secuencial, donde cada nuevo árbol intenta corregir los errores de los árboles anteriores.
+
+En este caso el funcionamiento es el siguiente:
+
+- Inicialización: Se comienza con un modelo simple, como la media de los valores de salida en el caso de la regresión.
+- Cálculo de Residuos: En cada iteración, se calculan los residuos (errores) del modelo actual.
+- Ajuste de un Nuevo Árbol: Se ajusta un nuevo árbol de decisión a estos residuos.
+- Actualización del Modelo: El nuevo árbol se agrega al modelo existente, ajustando su predicción para reducir los errores.
+- Repetición: Este proceso se repite varias veces, cada vez ajustando un nuevo árbol a los residuos del modelo actualizado23.
+
+Gradient Boosting es conocido por su capacidad para manejar diferentes tipos de funciones de pérdida, lo que lo hace muy adaptable a una variedad de problemas. Además, técnicas como el “shrinkage” (reducción de la tasa de aprendizaje) y el boosting estocástico se utilizan para mejorar la precisión y prevenir el sobreajuste.
+
 #### Naive bayes
+
+Es un algoritmo de machine learning basado en el teorema de Bayes, utilizado principalmente para tareas de clasificación. Es conocido por su simplicidad y eficiencia, especialmente en problemas de clasificación de texto, como el filtrado de spam y el análisis de sentimientos.
+
+Los principios básicos son:
+
+
+1 -  Teorema de Bayes: El algoritmo se basa en el teorema de Bayes, que describe la probabilidad de un evento, basado en el conocimiento previo de condiciones relacionadas con el evento. La fórmula es:
+$P(A \mid B) = \frac{P(B \mid A)\cdot P(A)}{P(B) }$
+
+donde:
+
+$P(A \mid B)$ es la probabilidad de $A$ dado $B$.
+
+$P(B \mid A)$ es la probabilidad de $B$ dado $A$.
+
+$P(A)$ y $P(B)$ son las probabilidades de $A$ y $B$ respectivamente.
+
+
+
+2 -Suposición de Independencia: Naive Bayes asume que las características (features) son independientes entre sí, lo cual rara vez es cierto en la práctica, pero aún así el algoritmo funciona sorprendentemente bien en muchos casos.
 
 #### Redes neuronales artificiales
 
