@@ -207,6 +207,77 @@ $P(A)$ y $P(B)$ son las probabilidades de $A$ y $B$ respectivamente.
 
 #### Redes neuronales artificiales
 
+Las redes neuronales artificiales (ANN, por sus siglas en inglés) son modelos computacionales inspirados en el funcionamiento del cerebro humano. Estas redes están diseñadas para reconocer patrones y aprender de los datos.
+
+**Componentes Principales de las RNA**
+
+- Neuronas Artificiales: Las unidades básicas de una red neuronal, que reciben entradas, las procesan y generan una salida.
+- Capas: Las neuronas se organizan en capas:
+- Capa de Entrada: Recibe los datos iniciales.
+- Capas Ocultas: Procesan las entradas a través de múltiples transformaciones.
+- Capa de Salida: Genera la predicción final del modelo.
+Pesos y Sesgos: Cada conexión entre neuronas tiene un peso que se ajusta durante el entrenamiento. Los sesgos ayudan a ajustar la salida de las neuronas.
+
+**Funcionamiento**
+- Propagación Hacia Adelante: Los datos de entrada se pasan a través de las capas de la red, multiplicándose por los pesos y aplicando funciones de activación para generar una salida.
+- Función de Activación: Determina si una neurona debe activarse o no. Ejemplos comunes incluyen la función sigmoide, ReLU (Rectified Linear Unit), y tanh.
+- Entrenamiento: Utiliza algoritmos como la retropropagación para ajustar los pesos y minimizar el error entre las predicciones de la red y los valores reales.
+
+**Aplicaciones**
+
+- Reconocimiento de Imágenes: Clasificación de objetos en imágenes.
+- Procesamiento de Lenguaje Natural: Traducción automática, análisis de sentimientos.
+- Predicción de Series Temporales: Pronóstico de ventas, análisis financiero.
+- Las redes neuronales son especialmente poderosas en tareas donde los patrones son complejos y difíciles de definir con reglas explícitas
+
 #### Clasificación de Vecinos Más Cercanos (Nearest Neighbors)
 
+El método de los k vecinos más cercanos (KNN) es un algoritmo de aprendizaje supervisado utilizado tanto para clasificación como para regresión. Es conocido por su simplicidad y efectividad en una variedad de problemas.
+
+**Principios Básicos**
+
+- Proximidad: El algoritmo clasifica un nuevo punto de datos basado en la mayoría de votos de sus ( k ) vecinos más cercanos. Para problemas de regresión, se toma el promedio de los valores de los ( k ) vecinos más cercanos.
+- Distancia: La distancia entre puntos de datos se calcula generalmente usando la distancia euclidiana, aunque se pueden usar otras métricas como la distancia de Manhattan.
+
+**Funcionamiento**
+- Almacenamiento de Datos: Durante la fase de entrenamiento, el algoritmo simplemente almacena todos los datos de entrenamiento.
+- Clasificación: Para clasificar un nuevo punto, se calcula la distancia entre este punto y todos los puntos de entrenamiento. Luego, se seleccionan los ( k ) puntos más cercanos y se asigna la clase más común entre ellos (para clasificación) o se calcula el promedio (para regresión).
+
+
 #### Análisis Discriminante Lineal y Cuadrático (LDA y QDA)
+
+El Análisis Discriminante Lineal (LDA) y el Análisis Discriminante Cuadrático (QDA) son métodos de clasificación supervisada que buscan asignar observaciones a categorías predefinidas basándose en sus características.
+
+**Análisis Discriminante Lineal (LDA)**
+
+**Suposiciones**
+
+LDA asume que las variables predictoras siguen una distribución normal y que las matrices de covarianza son iguales para todas las clases.
+
+**Función Discriminante**
+
+Utiliza una combinación lineal de las variables predictoras para separar las clases.
+
+**Aplicaciones**
+
+Es útil cuando las clases están bien separadas y se requiere un modelo estable, especialmente cuando el número de observaciones es bajo.
+
+**Análisis Discriminante Cuadrático (QDA)**
+
+**Suposiciones**
+QDA también asume que las variables predictoras siguen una distribución normal, pero permite que las matrices de covarianza sean diferentes para cada clase.
+
+**Función Discriminante**
+
+Utiliza una combinación cuadrática de las variables predictoras, lo que permite una mayor flexibilidad en la separación de las clases.
+
+**Aplicaciones**
+
+Es más adecuado cuando las clases no están bien separadas y las matrices de covarianza son diferentes.
+
+**Diferencias Clave**
+
+- Complejidad del Modelo: LDA es más simple y menos flexible que QDA, ya que utiliza una combinación lineal de las variables. QDA, al permitir combinaciones cuadráticas, puede capturar relaciones más complejas.
+- Estabilidad: LDA tiende a ser más estable cuando las clases están bien separadas y las matrices de covarianza son iguales. QDA es más flexible pero puede ser menos estable si las suposiciones no se cumplen.
+
+Ambos métodos son herramientas poderosas en el análisis de datos y la clasificación, y la elección entre ellos depende de las características específicas de los datos y las suposiciones que se puedan hacer sobre ellos.
