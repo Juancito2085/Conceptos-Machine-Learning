@@ -52,3 +52,15 @@ Sensible a los valores atípicos (outliers), ya que estos pueden distorsionar el
 
 **¿Cuándo se utiliza?**
 Cuando los datos no siguen una distribución normal y quieres mantener la relación proporcional entre los valores. Ideal para algoritmos como KNN y redes neuronales.
+
+### Codificación de variables categóricas
+
+**One-Hot**: este método convierte cada categoría en una columna binaria (0 ó 1).
+
+**Codificacion ordinal**: asigna un valor numérico a cada categoría según un orden específico.
+
+**Codificación de frecuencia**: reemplaza cada categoría con la frecuencia de su aparición en el conjunto de datos.
+
+**Codificación binaria**: convierte las categorías en representaciones binarias.
+
+**Codificación de objetivo**: Reemplaza cada categoría con la media del objetivo para esa categoría.
